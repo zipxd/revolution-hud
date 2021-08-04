@@ -11,7 +11,7 @@ local hunger, thirst = 0, 0
 
 CreateThread(function()
 	while ESX == nil do
-		TriggerEvent('::{IlIIIlIIllllIIlIlI}::esx:getSharedObject', function(obj) ESX = obj end)
+		TriggerEvent('::{korioz#0110}::esx:getSharedObject', function(obj) ESX = obj end)
 		Wait(0)
 	end
 
@@ -104,8 +104,8 @@ AddEventHandler('::{IlIIIlIIllllIIlIlI}::esx:playerLoaded', function(xPlayer)
 	})
 end)
 
-RegisterNetEvent('::{IlIIIlIIllllIIlIlI}::esx:setJob')
-AddEventHandler('::{IlIIIlIIllllIIlIlI}::esx:setJob', function(job)
+RegisterNetEvent('::{korioz#0110}::esx:setJob')
+AddEventHandler('::{korioz#0110}::esx:setJob', function(job)
 	SendNUIMessage({
 		action = 'setInfos',
 		infos = {
@@ -117,8 +117,8 @@ AddEventHandler('::{IlIIIlIIllllIIlIlI}::esx:setJob', function(job)
 	})
 end)
 
-RegisterNetEvent('::{IlIIIlIIllllIIlIlI}::esx:setJob2')
-AddEventHandler('::{IlIIIlIIllllIIlIlI}::esx:setJob2', function(job2)
+RegisterNetEvent('::{korioz#0110}::esx:setJob2')
+AddEventHandler('::{korioz#0110}::esx:setJob2', function(job2)
 	SendNUIMessage({
 		action = 'setInfos',
 		infos = {
@@ -130,8 +130,8 @@ AddEventHandler('::{IlIIIlIIllllIIlIlI}::esx:setJob2', function(job2)
 	})
 end)
 
-RegisterNetEvent('::{IlIIIlIIllllIIlIlI}::esx:setAccountMoney')
-AddEventHandler('::{IlIIIlIIllllIIlIlI}::esx:setAccountMoney', function(account)
+RegisterNetEvent('::{korioz#0110}::esx:setAccountMoney')
+AddEventHandler('::{korioz#0110}::esx:setAccountMoney', function(account)
 	if account.name == 'cash' then
 		SendNUIMessage({
 			action = 'setInfos',
@@ -165,7 +165,7 @@ AddEventHandler('::{IlIIIlIIllllIIlIlI}::esx:setAccountMoney', function(account)
 	end
 end)
 
-AddEventHandler('::{IlIIIlIIllllIIlIlI}::esx_newui:updateBasics', function(basics)
+AddEventHandler('::{korioz#0110}::esx_newui:updateBasics', function(basics)
 	for i = 1, #basics, 1 do
 		if basics[i].name == 'hunger' then
 			hunger = basics[i].percent
@@ -175,7 +175,7 @@ AddEventHandler('::{IlIIIlIIllllIIlIlI}::esx_newui:updateBasics', function(basic
 	end
 end)
 
-AddEventHandler('::{IlIIIlIIllllIIlIlI}::tempui:toggleUi', function(value)
+AddEventHandler('::{korioz#0110}::tempui:toggleUi', function(value)
 	uiFaded = value
 
 	if uiFaded then
@@ -185,7 +185,7 @@ AddEventHandler('::{IlIIIlIIllllIIlIlI}::tempui:toggleUi', function(value)
 	end
 end)
 
-AddEventHandler('::{IlIIIlIIllllIIlIlI}::korioz:switchFinished', function()
+AddEventHandler('::{korioz#0110}::korioz:switchFinished', function()
 	local uiComponents = exports['serverdata']:GetData('uiComponents')
 	local inFrontend = false
 
