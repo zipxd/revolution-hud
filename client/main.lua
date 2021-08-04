@@ -4,8 +4,6 @@ _print = print
 _NetworkExplodeVehicle = NetworkExplodeVehicle
 _AddExplosion = AddExplosion
 
-local ESX = nil
-
 local uiFaded = false
 local hunger, thirst = 0, 0
 
